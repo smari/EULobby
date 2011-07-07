@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>{{profile.name}}</h1>
+<table>
+	<tr><th>First name:</th>		<td>{{profile.firstname}}</td>	</tr>
+	<tr><th>Last name:</th>			<td>{{profile.lastname}}</td>	</tr>
+</table>
+
+<h2>Lobby affiliations</h2>
+{% with profile.lobby_set.all as results %}
+{% include "lobby_list_block.html" %}
+{% endwith %}
+
+
+<h2>EU Institutional Access</h2>
+{% if profile.longterm %}
+	Lobbyist has long term access to EU Institutions
+{% else %}
+	{% with profile.euaccesspass_set.all as results %}
+	{% include "accesscard_list_block.html" %}
+	{% endwith %}
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>{{profile.name}}</h1>
+<table>
+	<tr><th>Name:</th>			<td>{{profile.name}}</td>	</tr>
+	<tr><th>Identification number:</th>	<td>{{profile.identification}}</td>	</tr>
+	<tr><th>Address:</th>			<td>{{profile.address}}</td></tr>
+</table>
+
+<h2>Accredited lobbyists</h2>
+{% with profile.lobbyists.all as results %}
+{% include "lobbyist_list_block.html" %}
+{% endwith %}
+
+{% endblock %}

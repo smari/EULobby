@@ -1,0 +1,18 @@
+<table>
+	<thead>
+		<tr>
+			<th>Lobbyist</th>
+			<th>Access</th>
+			<th>Expiry</th>
+		</tr>
+	</thead>
+	<tbody>
+	{% for card in results %}
+		<tr>
+			<td><a href="/lobbyist/{{card.lobbyist.id}}/">{{card.lobbyist.name}}</a></td>
+			<td>{{card.access}}</td>
+			<td>{{card.expiry|date:"d/m/Y"}}</td>
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>

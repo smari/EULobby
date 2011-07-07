@@ -1,0 +1,22 @@
+<table>
+	<thead>
+		<tr>
+			<th>First name</th>
+			<th>Last name</th>
+			<th>Works for</th>
+			<th>Access</th>
+			<th>Last updated</th>
+		</tr>
+	</thead>
+	<tbody>
+	{% for lobbyist in results %}
+		<tr>
+			<td><a href="/lobbyist/{{lobbyist.id}}/">{{lobbyist.firstname}}</a></td>
+			<td><a href="/lobbyist/{{lobbyist.id}}/">{{lobbyist.lastname}}</a></td>
+			<td class="lobbylist">{% for lobby in lobbyist.lobby_set.all %}<a href="/lobby/{{lobby.id}}/">{{lobby.name}}</a>{% endfor %}</td>
+			<td>{{lobbyist.access}}</td>
+			<td>{{lobbyist.timestamp_lastupdated|date:"d/m/Y"}}</td>
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>

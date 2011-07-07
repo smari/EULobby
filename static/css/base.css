@@ -1,0 +1,76 @@
+* {
+	font-size:	11pt;
+	font-family:	Andika Basic, sans;
+	margin:		0;
+	padding:	0;
+}
+
+h1 {
+	font-size:	150%;
+	border-bottom:	1px solid #020066;
+}
+
+h2 {
+	margin-top:	20px;
+	border-bottom:	1px solid #020066;
+	font-size:	130%;
+	padding-left:	10px;
+}
+
+body {
+	margin:		0;
+	padding:	0;
+}
+
+#content {
+	margin:		20px;
+}
+
+#logo {
+	background:	#000090;
+	padding:	10px;
+	padding-left:	30px;
+	font-size:	290%;
+	color:		#ffda29;
+}
+
+#tagline {
+	margin-top:	-10px;
+	font-size:	11pt;
+}
+
+#menu {
+	background:	#020066;
+	color:		#ffda29;
+}
+
+#menu a {
+	display:	inline-block;
+	padding:	5px;
+	padding-left:	10px;
+	padding-right:	10px;
+	color:		#ffda29;
+}
+
+
+table {
+	width:	100%;
+	border-collapse: collapse;
+}
+
+
+thead {
+	background:	#8888ff;
+}
+
+th {
+	text-align:	right;
+}
+
+thead th {
+	text-align:	center;
+}
+
+td {
+	padding:	4px;
+}

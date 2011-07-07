@@ -1,0 +1,20 @@
+<table>
+	<thead>
+		<tr>
+			<th>Lobby name</th>
+			<th>Accredited lobbyists</th>
+			<th></th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+	{% for lobby in results %}
+		<tr>
+			<td><a href="/lobby/{{lobby.id}}/">{{lobby.name}}</a></td>
+			<td>{{lobby.lobbyists.all.count}}</td>
+			<td></td>
+			<td></td>
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>
