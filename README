@@ -1,0 +1,10 @@
+This is a quick and dirty attempt to create a scraper & viewer
+for data from the EU transparency register. It currently only
+has a scraper for the old version of the register, and even it
+is a bit buggy, but feel free to use this for any purpose and
+hopefully it'll help.
+
+Released under the terms of the Affero GNU General Public License, 
+version 3.0. See http://www.gnu.org/licenses/agpl.html for license
+details.
+
