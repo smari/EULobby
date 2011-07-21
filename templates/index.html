@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Monitoring Lobbyism in the European Union</h1>
+
+<p>This is the first version of a simple tool that monitors accredited lobbyists in the European Union and tries to capture changes to their status. This may in the future allow for 
+detecting revolving doors, lobby group jumping and other behavior that the educated European citizen should know about.
+</p>
+
+<p>Features include:</p>
+ 
+<p>
+<ul>
+	<li>Very early beta. Very broken and will crash randomly.</li>
+	<li>Literally hacked together on a train.</li>
+	<li>May or may not have a fully scraped dataset at any given time.</li>
+</ul>
+</p>
+
+<h2>Reasons for doing this</h2>
+<p>I saw this in Brussels recently, on a promotional video for the city being shown on repeat at Gare du Midi. It kind of summed up a major problem:</p>
+
+<img src="/static/img/lobbyists.jpg" style="margin: auto;"/>
+
+<p>Throw a euro in any direction on Schumann or Place Luxembourg, and you're going to hit at least four lobbyists (not empirically tested). This isn't necessarily a problem - lobbyism is
+in some ways an important part of democracy. But as somebody from the marginalized fringes of Not Industry, I tend to look upon lobbyists with a slight of sweat beading on my brow. These 
+are the people who have direct access to our supposedly democratically elected politicians (we'll have that debate later)? Oh shit.</p>
+
+<p>To quote mathematician Benoit Mandelbrot: <q>There are always <i>guys with screwdrivers</i>; we'll never know their schedules. Besides, how could men with screwdrivers generate that kind of systemic structure?</q></p>
+
+<p>The aim of this is to try and figure out what the patterns are in lobbyism. Where to the guys with screwdrivers come from, where do they go, and how are they interacting with <i>our</i> democracy.</p>
+
+<p>At the moment it's little more than a scraper that gathers data from the Transparency Register. As such it's not great. But it has one feature that the Transparency Register does not have and cannot have: Potential. The data is open. It is free. <a href="http://www.datalove.me">It flows</a>. So lets use it!
+
+{% endblock %}

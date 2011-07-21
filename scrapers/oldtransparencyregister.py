@@ -9,22 +9,26 @@ from urllib2 import urlopen
 from lobby.models import *
 from datetime import date
 
-letters = [chr(x) for x in range(65, 90)] + ['0']
+letters = [chr(x) for x in range(67, 90)] + ['0']	# 65
 
 baseurl = "http://www.europarl.europa.eu/parliament/expert/lobbyAlphaOrderByOrg.do?letter=%s&language=EN"
 
 def getletters():
 	for letter in letters:
+		print "Parsing file with letter %s" % letter
 		url = baseurl % letter
 		parsefile(urlopen(url))
+		print "Done parsing..."
 
 def parsefile(thefile):
+	if type(thefile) in [str, unicode]:
+		fh = open(thefile)
+		text = fh.read()	
 	if type(thefile) == file:
 		fh = thefile
+		text = fh.read()
 	else:
-		fh = open(thefile)
-
-	text = fh.read()
+		text = thefile.read()
 
 	wait = """
 	"""
@@ -96,4 +100,5 @@ def parsefile(thefile):
 
 
 if __name__ == "__main__":
-	parsefile("testdata/ac_a.html")
+	#parsefile("testdata/ac_a.html")
+	getletters()

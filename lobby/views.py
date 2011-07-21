@@ -4,6 +4,10 @@ from django.core.exceptions import ObjectDoesNotExist
 from lobby.models import *
 
 
+def index(request):
+	return render_to_response("index.html")	
+
+
 def lobby_list(request):
 	l = Lobby.objects.all().order_by("name")
 
